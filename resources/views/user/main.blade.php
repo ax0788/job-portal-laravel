@@ -1,655 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--=====================================
-                    META-TAG PART START
-        =======================================-->
-        <!-- REQUIRE META -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- AUTHOR META -->
-        <meta name="author" content="Mironcoder">
-        <meta name="email" content="mironcoder@gmail.com">
-        <meta name="profile" content="https://themeforest.net/user/mironcoder">
+<head>
+ <title>LaraJobs</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="" />
+ <meta name="keywords" content="" />
 
-        <!-- TEMPLATE META -->
-        <meta name="name" content="Classicads">
-        <meta name="type" content="Classified Advertising">
-        <meta name="title" content="Classicads - Classified Ads HTML Template">
-        <meta name="keywords" content="classicads, classified, ads, classified ads, listing, business, directory, jobs, marketing, portal, advertising, local, posting, ad listing, ad posting,">
-        <!--=====================================
-                    META-TAG PART END
-        =======================================-->
-
-        <!-- FOR WEBPAGE TITLE -->
-        <title>Home - Classicads</title>
-
-        <!--=====================================
-                    CSS LINK PART START
-        =======================================-->
-        <!-- FAVICON -->
-        <link rel="icon" href="{{ asset('images/favicon.png') }}">
-
-        <!-- FONTS -->
-        <link rel="stylesheet" href="{{ asset('fonts/flaticon/flaticon.css') }}">
-        <link rel="stylesheet" href="{{ asset('fonts/font-awesome/fontawesome.css') }}">
-
-        <!-- VENDOR -->
-        <link rel="stylesheet" href="{{ asset('css/vendor/slick.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap.min.css') }}">
-
-        <!-- CUSTOM -->
-        <link rel="stylesheet" href="{{ asset('css/custom/main.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/custom/index.css') }}">
-        <!--=====================================
-                    CSS LINK PART END
-        =======================================-->
-
-        @yield('styles')
-    </head>
-    <body>
-        <!--=====================================
-                    HEADER PART START
-        =======================================-->
-        <header class="header-part">
-            <div class="container">
-                <div class="header-content">
-                    <div class="header-left">
-                        <button type="button" class="header-widget sidebar-btn">
-                            <i class="fas fa-align-left"></i>
-                        </button>
-                        <a href="index.html" class="header-logo">
-                            <img src="{{ asset('images/logo.png') }}" alt="logo">
-                        </a>
-                        <a href="user-form.html" class="header-widget header-user">
-                            <img src="{{ asset('images/user.png') }}" alt="user">
-                            <span>join me</span>
-                        </a>
-                        <button type="button" class="header-widget search-btn">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    <form class="header-form">
-                        <div class="header-search">
-                            <button type="submit" title="Search Submit "><i class="fas fa-search"></i></button>
-                            <input type="text" placeholder="Search, Whatever you needs...">
-                            <button type="button" title="Search Option" class="option-btn"><i class="fas fa-sliders-h"></i></button>
-                        </div>
-                        <div class="header-option">
-                            <div class="option-grid">
-                                <div class="option-group"><input type="text" placeholder="City"></div>
-                                <div class="option-group"><input type="text" placeholder="State"></div>
-                                <div class="option-group"><input type="text" placeholder="Min Price"></div>
-                                <div class="option-group"><input type="text" placeholder="Max Price"></div>
-                                <button type="submit"><i class="fas fa-search"></i><span>Search</span></button>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="header-right">
-                        <ul class="header-list">
-                            <li class="header-item">
-                                <a href="bookmark.html" class="header-widget">
-                                    <i class="fas fa-heart"></i>
-                                    <sup>0</sup>
-                                </a>
-                            </li>
-                            <li class="header-item">
-                                <button type="button" class="header-widget">
-                                    <i class="fas fa-envelope"></i>
-                                    <sup>0</sup>
-                                </button>
-                                <div class="dropdown-card">
-                                    <div class="dropdown-header">
-                                        <h5>message (2)</h5>
-                                        <a href="message.html">view all</a>
-                                    </div>
-                                    <ul class="message-list">
-                                        <li class="message-item unread">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img active">
-                                                    <img src="{{ asset('images/avatar/01.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>miron mahmud <span>now</span></h6>
-                                                    <p>How are you my best frien...</p>
-                                                </div>
-                                                <span class="message-count">4</span>
-                                            </a>
-                                        </li>
-                                        <li class="message-item">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img active">
-                                                    <img src="{{ asset('images/avatar/03.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>shipu ahmed <span>3m</span></h6>
-                                                    <p><span>me:</span>How are you my best frien...</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-item unread">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img">
-                                                    <img src="{{ asset('images/avatar/02.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>tahmina bonny <span>2h</span></h6>
-                                                    <p>How are you my best frien...</p>
-                                                </div>
-                                                <span class="message-count">12</span>
-                                            </a>
-                                        </li>
-                                        <li class="message-item">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img active">
-                                                    <img src="{{ asset('images/avatar/04.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>nasrullah <span>5d</span></h6>
-                                                    <p>How are you my best frien...</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-item">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img">
-                                                    <img src="{{ asset('images/user.png') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>saikul azam <span>7w</span></h6>
-                                                    <p><span>me:</span>How are you my best frien...</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-item">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img active">
-                                                    <img src="{{ asset('images/avatar/02.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>munni akter <span>9m</span></h6>
-                                                    <p>How are you my best frien...</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="message-item">
-                                            <a href="message.html" class="message-link">
-                                                <div class="message-img active">
-                                                    <img src="{{ asset('images/avatar/03.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="message-text">
-                                                    <h6>shahin alam <span>1y</span></h6>
-                                                    <p>How are you my best frien...</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="header-item">
-                                <button type="button" class="header-widget">
-                                    <i class="fas fa-bell"></i>
-                                    <sup>0</sup>
-                                </button>
-                                <div class="dropdown-card">
-                                    <div class="dropdown-header">
-                                        <h5>Notification (1)</h5>
-                                        <a href="notification.html">view all</a>
-                                    </div>
-                                    <ul class="notify-list">
-                                        <li class="notify-item active">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="{{ asset('images/avatar/01.jpg') }}" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>miron mahmud</span> has added the advertisement post of your <span>booking</span> to his wishlist.</p>
-                                                    <span class="notify-time">just now</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notify-item">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="{{ asset("images/avatar/02.jpg") }}" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>tahmina bonny</span> gave you a <span>comment</span> and 5 star <span>review.</span></p>
-                                                    <span class="notify-time">2 hours ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notify-item">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="images/avatar/03.jpg" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>shipu ahmed</span> and <span>4 other</span> have seen your contact number</p>
-                                                    <span class="notify-time">3 minutes ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notify-item">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="images/avatar/02.jpg" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>miron mahmud</span> has added the advertisement post of your <span>booking</span> to his wishlist.</p>
-                                                    <span class="notify-time">5 days ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notify-item">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="images/avatar/04.jpg" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>labonno khan</span> gave you a <span>comment</span> and 5 star <span>review.</span></p>
-                                                    <span class="notify-time">4 months ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="notify-item">
-                                            <a href="#" class="notify-link">
-                                                <div class="notify-img">
-                                                    <img src="images/avatar/01.jpg" alt="avatar">
-                                                </div>
-                                                <div class="notify-content">
-                                                    <p class="notify-text"><span>azam khan</span> and <span>4 other</span> have seen your contact number</p>
-                                                    <span class="notify-time">1 years ago</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <a href="ad-post.html" class="btn btn-inline post-btn">
-                            <i class="fas fa-plus-circle"></i>
-                            <span>post your ad</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!--=====================================
-                    HEADER PART END
-        =======================================-->
+ <link rel="stylesheet" href="{{ asset('css/custom-bs.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
+ <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
+ <link rel="stylesheet" href="{{ asset('fonts/line-icons/style.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+ <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+ <!-- Icon Font Stylesheet -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
 
-        <!--=====================================
-                    SIDEBAR PART START
-        =======================================-->
-        <aside class="sidebar-part">
-            <div class="sidebar-body">
-                <div class="sidebar-header">
-                    <a href="index.html" class="sidebar-logo"><img src="images/logo.png" alt="logo"></a>
-                    <button class="sidebar-cross"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="sidebar-content">
-                    <div class="sidebar-profile">
-                        <a href="#" class="sidebar-avatar"><img src="images/avatar/01.jpg" alt="avatar"></a>
-                        <h4><a href="#" class="sidebar-name">Jackon Honson</a></h4>
-                        <a href="ad-post.html" class="btn btn-inline sidebar-post">
-                            <i class="fas fa-plus-circle"></i>
-                            <span>post your ad</span>
-                        </a>
-                    </div>
-                    <div class="sidebar-menu">
-                        <ul class="nav nav-tabs">
-                            <li><a href="#main-menu" class="nav-link active" data-toggle="tab">Main Menu</a></li>
-                            <li><a href="#author-menu" class="nav-link" data-toggle="tab">Author Menu</a></li>
-                        </ul>
+ <!-- Libraries Stylesheet -->
+ <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+ <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
-                        <div class="tab-pane active" id="main-menu">
-                            <ul class="navbar-list">
-                                <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="#">
-                                        <span>Categories</span>
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                    <ul class="dropdown-list">
-                                        <li><a class="dropdown-link" href="category-list.html">category list</a></li>
-                                        <li><a class="dropdown-link" href="category-details.html">category details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="#">
-                                        <span>Advertise List</span>
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                    <ul class="dropdown-list">
-                                        <li><a class="dropdown-link" href="ad-list-column3.html">ad list column 3</a></li>
-                                        <li><a class="dropdown-link" href="ad-list-column2.html">ad list column 2</a></li>
-                                        <li><a class="dropdown-link" href="ad-list-column1.html">ad list column 1</a></li>
-                                    </ul>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="#">
-                                        <span>Advertise details</span>
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                    <ul class="dropdown-list">
-                                        <li><a class="dropdown-link" href="ad-details-grid.html">ad details grid</a></li>
-                                        <li><a class="dropdown-link" href="ad-details-left.html">ad details left</a></li>
-                                        <li><a class="dropdown-link" href="ad-details-right.html">ad details right</a></li>
-                                    </ul>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="#">
-                                        <span>Pages</span>
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                    <ul class="dropdown-list">
-                                        <li><a class="dropdown-link" href="about.html">About Us</a></li>
-                                        <li><a class="dropdown-link" href="compare.html">Ad Compare</a></li>
-                                        <li><a class="dropdown-link" href="cities.html">Ad by Cities</a></li>
-                                        <li><a class="dropdown-link" href="price.html">Pricing Plan</a></li>
-                                        <li><a class="dropdown-link" href="user-form.html">User Form</a></li>
-                                        <li><a class="dropdown-link" href="404.html">404</a></li>
-                                    </ul>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="#">
-                                        <span>blogs</span>
-                                        <i class="fas fa-plus"></i>
-                                    </a>
-                                    <ul class="dropdown-list">
-                                        <li><a class="dropdown-link" href="blog-list.html">Blog list</a></li>
-                                        <li><a class="dropdown-link" href="blog-details.html">blog details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="navbar-item"><a class="navbar-link" href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
+ <!-- MAIN CSS -->
+ <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
 
-                        <div class="tab-pane" id="author-menu">
-                            <ul class="navbar-list">
-                                <li class="navbar-item"><a class="navbar-link" href="dashboard.html">Dashboard</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="profile.html">Profile</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="ad-post.html">Ad Post</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="my-ads.html">My Ads</a></li>
-                                <li class="navbar-item"><a class="navbar-link" href="setting.html">Settings</a></li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="bookmark.html">
-                                        <span>bookmark</span>
-                                        <span>0</span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="message.html">
-                                        <span>Message</span>
-                                        <span>0</span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item navbar-dropdown">
-                                    <a class="navbar-link" href="notification.html">
-                                        <span>Notification</span>
-                                        <span>0</span>
-                                    </a>
-                                </li>
-                                <li class="navbar-item"><a class="navbar-link" href="user-form.html">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
+{{-- BODY --}}
 
-                    <div class="sidebar-footer">
-                        <p>All Rights Reserved By <a href="#">Classicads</a></p>
-                        <p>Developed By <a href="https://themeforest.net/user/mironcoder">Mironcoder</a></p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-        <!--=====================================
-                    SIDEBAR PART END
-        =======================================-->
+<body id="top">
+ <div id="overlayer"></div>
+ <div class="loader">
+  <div class="spinner-border text-primary" role="status">
+   <span class="sr-only">Loading...</span>
+  </div>
+ </div>
 
 
-        <!--=====================================
-                    MOBILE-NAV PART START
-        =======================================-->
-        <nav class="mobile-nav">
-            <div class="container">
-                <div class="mobile-group">
-                    <a href="index.html" class="mobile-widget">
-                        <i class="fas fa-home"></i>
-                        <span>home</span>
-                    </a>
-                    <a href="user-form.html" class="mobile-widget">
-                        <i class="fas fa-user"></i>
-                        <span>join me</span>
-                    </a>
-                    <a href="ad-post.html" class="mobile-widget plus-btn">
-                        <i class="fas fa-plus"></i>
-                        <span>Ad Post</span>
-                    </a>
-                    <a href="notification.html" class="mobile-widget">
-                        <i class="fas fa-bell"></i>
-                        <span>notify</span>
-                        <sup>0</sup>
-                    </a>
-                    <a href="message.html" class="mobile-widget">
-                        <i class="fas fa-envelope"></i>
-                        <span>message</span>
-                        <sup>0</sup>
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <!--=====================================
-                    MOBILE-NAV PART END
-        =======================================-->
+ <div class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+   <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+     <span class="icon-close2 js-menu-toggle"></span>
+    </div>
+   </div>
+   <div class="site-mobile-menu-body"></div>
+  </div> <!-- .site-mobile-menu -->
 
 
-         @yield('content')
+  <!-- NAVBAR -->
+  <header class="site-navbar" myHeader>
+   <div class="container-fluid header-nav ">
+    <div class="row align-items-center secondary-nav">
+     <div class="site-logo col-6"><a href="index.html">JobBoard</a></div>
 
+     <nav class="mx-auto site-navigation">
+      <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+       <li><a href="index.html" class="nav-link active">Home</a></li>
+       <li><a href="about.html">About</a></li>
+       <li class="has-children">
+        <a href="job-listings.html">Job Listings</a>
+        <ul class="dropdown">
+         <li><a href="job-single.html">Job Single</a></li>
+         <li><a href="post-job.html">Post a Job</a></li>
+        </ul>
+       </li>
+       <li class="has-children">
+        <a href="services.html">Pages</a>
+        <ul class="dropdown">
+         <li><a href="services.html">Services</a></li>
+         <li><a href="service-single.html">Service Single</a></li>
+         <li><a href="blog-single.html">Blog Single</a></li>
+         <li><a href="portfolio.html">Portfolio</a></li>
+         <li><a href="portfolio-single.html">Portfolio Single</a></li>
+         <li><a href="testimonials.html">Testimonials</a></li>
+         <li><a href="faq.html">Frequently Ask Questions</a></li>
+         <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+       </li>
+       <li><a href="blog.html">Blog</a></li>
+       <li><a href="contact.html">Contact</a></li>
+       <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
+       <li class="d-lg-none"><a href="login.html">Log In</a></li>
+      </ul>
+     </nav>
 
+     <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+      <div class="ml-auto">
+       <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
+         class="mr-2 icon-add"></span>Post a Job</a>
+       <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
+         class="mr-2 icon-lock_outline"></span>Log In</a>
+      </div>
+      <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
+        class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+     </div>
 
-        <!--=====================================
-                    FOOTER PART PART
-        =======================================-->
-        <footer class="footer-part">
-            <div class="container">
-                <div class="row newsletter">
-                    <div class="col-lg-6">
-                        <div class="news-content">
-                            <h2>Subscribe for Latest Offers</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, aliquid reiciendis! Exercitationem soluta provident non.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <form class="news-form">
-                            <input type="text" placeholder="Enter Your Email Address">
-                            <button class="btn btn-inline">
-                                <i class="fas fa-envelope"></i>
-                                <span>Subscribe</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="footer-content">
-                            <h3>Contact Us</h3>
-                            <ul class="footer-address">
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <p>1420 West Jalkuri Fatullah, <span>Narayanganj, BD</span></p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope"></i>
-                                    <p>support@classicads.com <span>info@classicads.com</span></p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-phone-alt"></i>
-                                    <p>+8801838288389 <span>+8801941101915</span></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="footer-content">
-                            <h3>Quick Links</h3>
-                            <ul class="footer-widget">
-                                <li><a href="#">Store Location</a></li>
-                                <li><a href="#">Orders Tracking</a></li>
-                                <li><a href="#">My Account</a></li>
-                                <li><a href="#">Size Guide</a></li>
-                                <li><a href="#">Faq</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="footer-content">
-                            <h3>Information</h3>
-                            <ul class="footer-widget">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Delivery System</a></li>
-                                <li><a href="#">Secure Payment</a></li>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Sitemap</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="footer-info">
-                            <a href="#"><img src="images/logo.png" alt="logo"></a>
-                            <ul class="footer-count">
-                                <li>
-                                    <h5>929,238</h5>
-                                    <p>Registered Users</p>
-                                </li>
-                                <li>
-                                    <h5>242,789</h5>
-                                    <p>Community Ads</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="footer-card-content">
-                            <div class="footer-payment">
-                                <a href="#"><img src="images/pay-card/01.jpg" alt="01"></a>
-                                <a href="#"><img src="images/pay-card/02.jpg" alt="02"></a>
-                                <a href="#"><img src="images/pay-card/03.jpg" alt="03"></a>
-                                <a href="#"><img src="images/pay-card/04.jpg" alt="04"></a>
-                            </div>
-                            <div class="footer-option">
-                                <button type="button" data-toggle="modal" data-target="#language"><i class="fas fa-globe"></i>English</button>
-                                <button type="button" data-toggle="modal" data-target="#currency"><i class="fas fa-dollar-sign"></i>USD</button>
-                            </div>
-                            <div class="footer-app">
-                                <a href="#"><img src="images/play-store.png" alt="play-store"></a>
-                                <a href="#"><img src="images/app-store.png" alt="app-store"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-end">
-                <div class="container">
-                    <div class="footer-end-content">
-                        <p>All Copyrights Reserved &copy; 2021 - Developed by <a href="#">Mironcoder</a></p>
-                        <ul class="footer-social">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!--=====================================
-                    FOOTER PART END
-        =======================================-->
+    </div>
+   </div>
+  </header>
+   <div class="content">
 
+       @yield('content')
 
-        <!--=====================================
-                  CURRENCY MODAL PART START
-        =======================================-->
-        <div class="modal fade" id="currency">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4>Choose a Currency</h4>
-                        <button class="fas fa-times" data-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <button class="modal-link active">United States Doller (USD) - $</button>
-                        <button class="modal-link">Euro (EUR) - €</button>
-                        <button class="modal-link">British Pound (GBP) - £</button>
-                        <button class="modal-link">Australian Dollar (AUD) - A$</button>
-                        <button class="modal-link">Canadian Dollar (CAD) - C$</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--=====================================
-                  CURRENCY MODAL PART END
-        =======================================-->
+   </div>
 
+  {{-- FOOTER --}}
+  <footer class="site-footer">
 
-        <!--=====================================
-                  LANGUAGE MODAL PART END
-        =======================================-->
-        <div class="modal fade" id="language">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4>Choose a Language</h4>
-                        <button class="fas fa-times" data-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <button class="modal-link active">English</button>
-                        <button class="modal-link">bangali</button>
-                        <button class="modal-link">arabic</button>
-                        <button class="modal-link">germany</button>
-                        <button class="modal-link">spanish</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--=====================================
-                   LANGUAGE MODAL PART END
-        =======================================-->
+   <a href="#top" class="smoothscroll scroll-top">
+    <span class="icon-keyboard_arrow_up"></span>
+   </a>
 
+   <div class="container">
+    <div class="row mb-5">
+     <div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h3>Search Trending</h3>
+      <ul class="list-unstyled">
+       <li><a href="#">Web Design</a></li>
+       <li><a href="#">Graphic Design</a></li>
+       <li><a href="#">Web Developers</a></li>
+       <li><a href="#">Python</a></li>
+       <li><a href="#">HTML5</a></li>
+       <li><a href="#">CSS3</a></li>
+      </ul>
+     </div>
+     <div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h3>Company</h3>
+      <ul class="list-unstyled">
+       <li><a href="#">About Us</a></li>
+       <li><a href="#">Career</a></li>
+       <li><a href="#">Blog</a></li>
+       <li><a href="#">Resources</a></li>
+      </ul>
+     </div>
+     <div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h3>Support</h3>
+      <ul class="list-unstyled">
+       <li><a href="#">Support</a></li>
+       <li><a href="#">Privacy</a></li>
+       <li><a href="#">Terms of Service</a></li>
+      </ul>
+     </div>
+     <div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h3>Contact Us</h3>
+      <div class="footer-social">
+       <a href="#"><span class="icon-facebook"></span></a>
+       <a href="#"><span class="icon-twitter"></span></a>
+       <a href="#"><span class="icon-instagram"></span></a>
+       <a href="#"><span class="icon-linkedin"></span></a>
+      </div>
+     </div>
+    </div>
 
-        <!--=====================================
-                    JS LINK PART START
-        =======================================-->
-        <!-- VENDOR -->
-        {{-- <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script> --}}
+    <div class="row text-center">
+     <div class="col-12">
+      <p class="copyright"><small>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;
+        <script>
+         document.write(new Date().getFullYear());
+        </script> All rights reserved | This template is made with <i class="icon-heart text-danger"
+         aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+       </small></p>
+     </div>
+    </div>
+   </div>
+  </footer>
 
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-        <script src="{{ asset('js/vendor/popper.min.js') }}"></script>
-        <script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
+ </div>
 
+ <!-- SCRIPTS -->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/isotope.pkgd.min.js"></script>
+ <script src="js/stickyfill.min.js"></script>
+ <script src="js/jquery.fancybox.min.js"></script>
+ <script src="js/jquery.easing.1.3.js"></script>
 
-        <script src="{{ asset('js/vendor/slick.min.js') }}"></script>
-        <!-- CUSTOM -->
-        <script  src="{{ asset('js/custom/slick.js') }}"></script>
-        <script src="{{ asset('js/custom/main.js') }}"></script>
+ <script src="js/jquery.waypoints.min.js"></script>
+ <script src="js/jquery.animateNumber.min.js"></script>
+ <script src="js/owl.carousel.min.js"></script>
 
-        <!--=====================================
-                    JS LINK PART END
-        =======================================-->
-    </body>
-</html?>
+ <script src="js/bootstrap-select.min.js"></script>
 
+ <script src="js/custom.js"></script>
+</body>
 
-
-
-
-
+</html>
