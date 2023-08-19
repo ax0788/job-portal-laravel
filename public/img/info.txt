@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Modak-Regular
+font link: https://fonts.google.com/specimen/Modak
+font author: Ek Type
+font author site: https://ektype.in/
+
+
+icon designer: Alfredo @ IconsAlfredo.us
+icon designer link: /AlfredoCreates
+        
+{"bg":"#22B926","icon":"#8FD989","font":"#FFFFFF","slogan":"#ffffff"}
+      

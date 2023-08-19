@@ -2,193 +2,189 @@
 <html lang="en">
 
 <head>
- <title>LaraJobs</title>
  <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta name="description" content="" />
- <meta name="keywords" content="" />
+ <title>Laravel Jobs</title>
+ <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ <meta content="" name="keywords">
+ <meta content="" name="description">
 
- <link rel="stylesheet" href="{{ asset('css/custom-bs.css') }}">
- <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
- <link rel="stylesheet" href="{{ asset('css/bootstrap-select.min.css') }}">
- <link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
- <link rel="stylesheet" href="{{ asset('fonts/line-icons/style.css') }}">
- <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
- <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+ <!-- Favicon -->
+ <link href="{{ asset('img/laravel-favicon.png') }}" rel="icon">
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+  rel="stylesheet">
+
  <!-- Icon Font Stylesheet -->
  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
 
  <!-- Libraries Stylesheet -->
  <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
  <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
- <!-- MAIN CSS -->
- <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+ <!-- Template Stylesheet -->
+ <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+ {{-- Laravel with Mix  --}}
+ <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
+
+
 </head>
 
-{{-- BODY --}}
-
-<body id="top">
- <div id="overlayer"></div>
- <div class="loader">
-  <div class="spinner-border text-primary" role="status">
-   <span class="sr-only">Loading...</span>
-  </div>
- </div>
-
-
- <div class="site-wrap">
-
-  <div class="site-mobile-menu site-navbar-target">
-   <div class="site-mobile-menu-header">
-    <div class="site-mobile-menu-close mt-3">
-     <span class="icon-close2 js-menu-toggle"></span>
-    </div>
+<body>
+ <div class="container-xxl bg-white p-0">
+  <!-- Spinner Start -->
+  {{-- <div id="spinner"
+   class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+   <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <span class="sr-only">Loading...</span>
    </div>
-   <div class="site-mobile-menu-body"></div>
-  </div> <!-- .site-mobile-menu -->
+  </div> --}}
+  <!-- Spinner End -->
 
 
-  <!-- NAVBAR -->
-  <header class="site-navbar" myHeader>
-   <div class="container-fluid header-nav ">
-    <div class="row align-items-center secondary-nav">
-     <div class="site-logo col-6"><a href="index.html">JobBoard</a></div>
-
-     <nav class="mx-auto site-navigation">
-      <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-       <li><a href="index.html" class="nav-link active">Home</a></li>
-       <li><a href="about.html">About</a></li>
-       <li class="has-children">
-        <a href="job-listings.html">Job Listings</a>
-        <ul class="dropdown">
-         <li><a href="job-single.html">Job Single</a></li>
-         <li><a href="post-job.html">Post a Job</a></li>
-        </ul>
-       </li>
-       <li class="has-children">
-        <a href="services.html">Pages</a>
-        <ul class="dropdown">
-         <li><a href="services.html">Services</a></li>
-         <li><a href="service-single.html">Service Single</a></li>
-         <li><a href="blog-single.html">Blog Single</a></li>
-         <li><a href="portfolio.html">Portfolio</a></li>
-         <li><a href="portfolio-single.html">Portfolio Single</a></li>
-         <li><a href="testimonials.html">Testimonials</a></li>
-         <li><a href="faq.html">Frequently Ask Questions</a></li>
-         <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-       </li>
-       <li><a href="blog.html">Blog</a></li>
-       <li><a href="contact.html">Contact</a></li>
-       <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
-       <li class="d-lg-none"><a href="login.html">Log In</a></li>
-      </ul>
-     </nav>
-
-     <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
-      <div class="ml-auto">
-       <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span
-         class="mr-2 icon-add"></span>Post a Job</a>
-       <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span
-         class="mr-2 icon-lock_outline"></span>Log In</a>
-      </div>
-      <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span
-        class="icon-menu h3 m-0 p-0 mt-2"></span></a>
-     </div>
-
-    </div>
-   </div>
-  </header>
-   <div class="content">
-
-       @yield('content')
-
-   </div>
-
-  {{-- FOOTER --}}
-  <footer class="site-footer">
-
-   <a href="#top" class="smoothscroll scroll-top">
-    <span class="icon-keyboard_arrow_up"></span>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light  sticky-top p-0">
+   <a href="{{ route('home') }}" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+    <h1 class="m-0 text-primary">LaraJobs</h1>
    </a>
+   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarCollapse">
+    <div class="navbar-nav ms-auto p-4 p-lg-0">
+     <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
+     @guest
+     <a href="{{ route('login') }}" class="nav-item nav-link">Login</a>
+     <a href="{{ route('register') }}" class="nav-item nav-link">Register</a>
+     @endguest
+    @if (!Auth::guest() && Auth::user()->role == 'employer')
+    <a href="{{ route('company.view') }}" class="nav-item nav-link">{{ Auth::user()->company->cname }}</a>
+    @elseif(!Auth::guest() && Auth::user()->role == 'seeker')
+    <a href="#" class="nav-item nav-link">About</a>
+    <a href="#" class="nav-item nav-link">{{ Auth::user()->name }}</a>
+    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+    class="text-danger  nav-item nav-link log-out"><span class="mr-2 bi bi-box-arrow-right"></span> Logout</a>
 
-   <div class="container">
-    <div class="row mb-5">
-     <div class="col-6 col-md-3 mb-4 mb-md-0">
-      <h3>Search Trending</h3>
-      <ul class="list-unstyled">
-       <li><a href="#">Web Design</a></li>
-       <li><a href="#">Graphic Design</a></li>
-       <li><a href="#">Web Developers</a></li>
-       <li><a href="#">Python</a></li>
-       <li><a href="#">HTML5</a></li>
-       <li><a href="#">CSS3</a></li>
-      </ul>
+   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+    @csrf
+   </form>
+    @endif
+    </div>
+
+    @if (!Auth::guest() && Auth::user()->role == 'employer')
+       <a href="{{ route('job.create') }}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Post A Job<i
+         class="fa fa-arrow-right ms-3"></i></a>
+      @endif
+
+   </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <div class="container-fluid  wow fadeIn" data-wow-delay="0.1s">
+
+  @yield('content')
+
+</div>
+
+
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+   <div class="container py-5">
+    <div class="row g-5">
+     <div class="col-lg-3 col-md-6">
+      <h5 class="text-white mb-4">Company</h5>
+      <a class="btn btn-link text-white-50" href="">About Us</a>
+      <a class="btn btn-link text-white-50" href="">Contact Us</a>
+      <a class="btn btn-link text-white-50" href="">Our Services</a>
+      <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+      <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
      </div>
-     <div class="col-6 col-md-3 mb-4 mb-md-0">
-      <h3>Company</h3>
-      <ul class="list-unstyled">
-       <li><a href="#">About Us</a></li>
-       <li><a href="#">Career</a></li>
-       <li><a href="#">Blog</a></li>
-       <li><a href="#">Resources</a></li>
-      </ul>
+     <div class="col-lg-3 col-md-6">
+      <h5 class="text-white mb-4">Quick Links</h5>
+      <a class="btn btn-link text-white-50" href="">About Us</a>
+      <a class="btn btn-link text-white-50" href="">Contact Us</a>
+      <a class="btn btn-link text-white-50" href="">Our Services</a>
+      <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+      <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
      </div>
-     <div class="col-6 col-md-3 mb-4 mb-md-0">
-      <h3>Support</h3>
-      <ul class="list-unstyled">
-       <li><a href="#">Support</a></li>
-       <li><a href="#">Privacy</a></li>
-       <li><a href="#">Terms of Service</a></li>
-      </ul>
+     <div class="col-lg-3 col-md-6">
+      <h5 class="text-white mb-4">Contact</h5>
+      <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+      <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+      <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+      <div class="d-flex pt-2">
+       <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+       <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+       <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+       <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+      </div>
      </div>
-     <div class="col-6 col-md-3 mb-4 mb-md-0">
-      <h3>Contact Us</h3>
-      <div class="footer-social">
-       <a href="#"><span class="icon-facebook"></span></a>
-       <a href="#"><span class="icon-twitter"></span></a>
-       <a href="#"><span class="icon-instagram"></span></a>
-       <a href="#"><span class="icon-linkedin"></span></a>
+     <div class="col-lg-3 col-md-6">
+      <h5 class="text-white mb-4">Newsletter</h5>
+      <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+      <div class="position-relative mx-auto" style="max-width: 400px;">
+       <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+       <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
       </div>
      </div>
     </div>
+   </div>
+   <div class="container">
+    <div class="copyright">
+     <div class="row">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+       &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
 
-    <div class="row text-center">
-     <div class="col-12">
-      <p class="copyright"><small>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;
-        <script>
-         document.write(new Date().getFullYear());
-        </script> All rights reserved | This template is made with <i class="icon-heart text-danger"
-         aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-       </small></p>
+       <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+       Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+       <div class="footer-menu">
+        <a href="">Home</a>
+        <a href="">Cookies</a>
+        <a href="">Help</a>
+        <a href="">FQAs</a>
+       </div>
+      </div>
      </div>
     </div>
    </div>
-  </footer>
+  </div>
+  <!-- Footer End -->
 
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
  </div>
 
- <!-- SCRIPTS -->
- <script src="js/jquery.min.js"></script>
- <script src="js/bootstrap.bundle.min.js"></script>
- <script src="js/isotope.pkgd.min.js"></script>
- <script src="js/stickyfill.min.js"></script>
- <script src="js/jquery.fancybox.min.js"></script>
- <script src="js/jquery.easing.1.3.js"></script>
+ <!-- JavaScript Libraries -->
+ <script src="{{ mix('js/app.js') }}"></script>
 
- <script src="js/jquery.waypoints.min.js"></script>
- <script src="js/jquery.animateNumber.min.js"></script>
- <script src="js/owl.carousel.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+ <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+ <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+ <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+ <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
- <script src="js/bootstrap-select.min.js"></script>
+ <!-- Template Javascript -->
+ <script src="{{ asset('js/main.js') }}"></script>
 
- <script src="js/custom.js"></script>
+ <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
+
 </body>
 
 </html>

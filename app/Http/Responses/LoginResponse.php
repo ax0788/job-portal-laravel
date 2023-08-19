@@ -3,7 +3,7 @@
 namespace App\Http\Responses;
 
 use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
-use Laravel\Fortify\Fortify;
+use Illuminate\Support\Facades\Auth;
 
 class LoginResponse implements LoginResponseContract
 {
@@ -17,8 +17,11 @@ class LoginResponse implements LoginResponseContract
     {
         // $home = auth()->user()->role == 'admin' ? 'admin/dashboard' : '/';
 
-        $home = auth()->user()->role == 'admin' ? '/admin-dashboard' : '/home';
 
-        return redirect()->intended($home);
+        if (Auth::user()->role == 'seeker') {
+            return redirect()->route('home');
+        } elseif (Auth::user()->role == 'employer') {
+            return redirect()->route('company.create');
+        }
     }
 }

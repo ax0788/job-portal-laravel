@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Job;
+use App\Models\Company;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +16,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -23,6 +26,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+        $jobs = Job::latest()->limit(10)->where('status', 1)->get();
+        $companies = Company::orderBy('id', 'desc')->limit(10)->get();
+        return view('user.home', compact('jobs', 'companies'));
+
     }
+
 }

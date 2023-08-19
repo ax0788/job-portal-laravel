@@ -1,389 +1,264 @@
 @extends('user.main')
-
 @section('content')
- <!-- HOME -->
- <section class="home-section section-hero overlay bg-image" style="background-image: url('images/hero_1.jpg');"
-  id="home-section">
+ <!-- Carousel Start -->
+ <div class="container-fluid p-0">
+  <div class="owl-carousel header-carousel position-relative">
+   <div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+     style="background: rgba(43, 57, 64, .5);">
+     <div class="container">
+      <div class="row justify-content-start">
+       <div class="col-10 col-lg-8">
+        <h1 class="display-3 text-white animated slideInDown mb-4">Find The Perfect Job That You Deserved</h1>
+        <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
+         Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
+        <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="owl-carousel-item position-relative">
+    <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+     style="background: rgba(43, 57, 64, .5);">
+     <div class="container">
+      <div class="row justify-content-start">
+       <div class="col-10 col-lg-8">
+        <h1 class="display-3 text-white animated slideInDown mb-4">Find The Best Startup Job That Fit You</h1>
+        <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
+         Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
+        <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <!-- Carousel End -->
 
+
+ <!-- Search Start -->
+ <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
   <div class="container">
-   <div class="row align-items-center justify-content-center">
-    <div class="col-md-12">
-     <div class="mb-5 text-center">
-      <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+   <div class="row g-2">
+    <div class="col-md-10">
+     <div class="row g-2">
+      <div class="col-md-4">
+       <input type="text" class="form-control border-0" placeholder="Keyword" />
+      </div>
+      <div class="col-md-4">
+       <select class="form-select border-0">
+        <option selected>Category</option>
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <option value="3">Category 3</option>
+       </select>
+      </div>
+      <div class="col-md-4">
+       <select class="form-select border-0">
+        <option selected>Location</option>
+        <option value="1">Location 1</option>
+        <option value="2">Location 2</option>
+        <option value="3">Location 3</option>
+       </select>
+      </div>
      </div>
-     <form method="post" class="search-jobs-form">
-      <div class="row mb-5">
-       <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <input type="text" class="form-control form-control-lg" placeholder="Job title, Company...">
-       </div>
-       <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true"
-         title="Select Region">
-         <option>Anywhere</option>
-         <option>San Francisco</option>
-         <option>Palo Alto</option>
-         <option>New York</option>
-         <option>Manhattan</option>
-         <option>Ontario</option>
-         <option>Toronto</option>
-         <option>Kansas</option>
-         <option>Mountain View</option>
-        </select>
-       </div>
-       <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true"
-         title="Select Job Type">
-         <option>Part Time</option>
-         <option>Full Time</option>
-        </select>
-       </div>
-       <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
-        <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span
-          class="icon-search icon mr-2"></span>Search Job</button>
-       </div>
-      </div>
-      <div class="row">
-       <div class="col-md-12 popular-keywords">
-        <h3>Trending Keywords:</h3>
-        <ul class="keywords list-unstyled m-0 p-0">
-         <li><a href="#" class="">UI Designer</a></li>
-         <li><a href="#" class="">Python</a></li>
-         <li><a href="#" class="">Developer</a></li>
-        </ul>
-       </div>
-      </div>
-     </form>
+    </div>
+    <div class="col-md-2">
+     <button class="btn btn-dark border-0 w-100">Search</button>
     </div>
    </div>
   </div>
-
-  <a href="#next" class="scroll-button smoothscroll">
-   <span class=" icon-keyboard_arrow_down"></span>
-  </a>
-
- </section>
-
- <!-- CATEGORIES -->
- <section class="py-5">
-  <div class="container-xxl py-5">
-   <div class="container categories">
-    <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s"
-     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">Explore By Category</h1>
-    <div class="row g-4">
-
-     <div class="col-lg-3 col-sm-6 wow fadeInUp mb-3" data-wow-delay="0.1s"
-      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-mail-bulk text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Marketing</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
+ </div>
+ <!-- Search End -->
 
 
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
-      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-headset text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Customer Service</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
-      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-user-tie text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Human Resource</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
-      style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-tasks text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Project Management</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s"
-      style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-chart-line text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Business Development</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s"
-      style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-hands-helping text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Sales &amp; Communication</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s"
-      style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-book-reader text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Teaching &amp; Education</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"
-      style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
-      <a class="cat-item rounded p-6 m-6" href="">
-       <i class="fa fa-3x fa-drafting-compass text-primary mb-4 mt-4 ml-4"></i>
-       <h6 class="mb-3 ml-3">Design &amp; Creative</h6>
-       <p class="mb-3 ml-3">123 Vacancy</p>
-      </a>
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
- {{-- CATEGORIES END --}}
-
- <!-- JOB STATS -->
- <section class="py-5 bg-image overlay-primary fixed overlay" id="next"
-  style="background-image: url('images/hero_1.jpg');">
+ <!-- Category Start -->
+ <div class="container-xxl py-5">
   <div class="container">
-   <div class="row mb-5 justify-content-center">
-    <div class="col-md-7 text-center">
-     <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
-     <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis
-      recusandae sequi excepturi corrupti.</p>
+   <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Explore By Category</h1>
+   <div class="row g-4">
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+      <h6 class="mb-3">Marketing</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
     </div>
-   </div>
-   <div class="row pb-0 block__19738 section-counter">
-
-    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-     <div class="d-flex align-items-center justify-content-center mb-2">
-      <strong class="number" data-number="1930">0</strong>
-     </div>
-     <span class="caption">Candidates</span>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+      <h6 class="mb-3">Customer Service</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
     </div>
-
-    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-     <div class="d-flex align-items-center justify-content-center mb-2">
-      <strong class="number" data-number="54">0</strong>
-     </div>
-     <span class="caption">Jobs Posted</span>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+      <h6 class="mb-3">Human Resource</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
     </div>
-
-    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-     <div class="d-flex align-items-center justify-content-center mb-2">
-      <strong class="number" data-number="120">0</strong>
-     </div>
-     <span class="caption">Jobs Filled</span>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-tasks text-primary mb-4"></i>
+      <h6 class="mb-3">Project Management</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
     </div>
-
-    <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
-     <div class="d-flex align-items-center justify-content-center mb-2">
-      <strong class="number" data-number="550">0</strong>
-     </div>
-     <span class="caption">Companies</span>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+      <h6 class="mb-3">Business Development</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
     </div>
-
-
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+      <h6 class="mb-3">Sales & Communication</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
+    </div>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+      <h6 class="mb-3">Teaching & Education</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
+    </div>
+    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+     <a class="cat-item rounded p-4" href="">
+      <i class="fa fa-3x fa-drafting-compass text-primary mb-4"></i>
+      <h6 class="mb-3">Design & Creative</h6>
+      <p class="mb-0">123 Vacancy</p>
+     </a>
+    </div>
    </div>
   </div>
- </section>
- <!-- JOB STATS END-->
+ </div>
+ <!-- Category End -->
 
 
- <!-- JOB LISTINGS -->
- <section class="site-section">
+ <!-- About Start -->
+ <div class="container-xxl py-5">
   <div class="container">
-
-   <div class="row mb-5 justify-content-center">
-    <div class="col-md-7 text-center">
-     <h2 class="section-title mb-2">43,167 Job Listed</h2>
+   <div class="row g-5 align-items-center">
+    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+     <div class="row g-0 about-bg rounded overflow-hidden">
+      <div class="col-6 text-start">
+       <img class="img-fluid w-100" src="img/about-1.jpg">
+      </div>
+      <div class="col-6 text-start">
+       <img class="img-fluid" src="img/about-2.jpg" style="width: 85%; margin-top: 15%;">
+      </div>
+      <div class="col-6 text-end">
+       <img class="img-fluid" src="img/about-3.jpg" style="width: 85%;">
+      </div>
+      <div class="col-6 text-end">
+       <img class="img-fluid w-100" src="img/about-4.jpg">
+      </div>
+     </div>
+    </div>
+    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+     <h1 class="mb-4">We Help To Get The Best Job And Find A Talent</h1>
+     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita
+      erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+     <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
+     <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
+     <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
+     <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
     </div>
    </div>
-
-
-   <ul class="job-listings mb-5">
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Product Designer</h2>
-       <strong>Adidas</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> New York, New York
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-danger">Part Time</span>
-      </div>
-     </div>
-
-    </li>
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_2.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Digital Marketing Director</h2>
-       <strong>Sprint</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> Overland Park, Kansas
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-success">Full Time</span>
-      </div>
-     </div>
-    </li>
-
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_3.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Back-end Engineer (Python)</h2>
-       <strong>Amazon</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> Overland Park, Kansas
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-success">Full Time</span>
-      </div>
-     </div>
-    </li>
-
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_4.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Senior Art Director</h2>
-       <strong>Microsoft</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> Anywhere
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-success">Full Time</span>
-      </div>
-     </div>
-    </li>
-
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_5.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Product Designer</h2>
-       <strong>Puma</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> San Mateo, CA
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-success">Full Time</span>
-      </div>
-     </div>
-    </li>
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_1.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Product Designer</h2>
-       <strong>Adidas</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> New York, New York
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-danger">Part Time</span>
-      </div>
-     </div>
-
-    </li>
-    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-     <a href="job-single.html"></a>
-     <div class="job-listing-logo">
-      <img src="images/job_logo_2.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
-     </div>
-
-     <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
-      <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
-       <h2>Digital Marketing Director</h2>
-       <strong>Sprint</strong>
-      </div>
-      <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
-       <span class="icon-room"></span> Overland Park, Kansas
-      </div>
-      <div class="job-listing-meta">
-       <span class="badge badge-success">Full Time</span>
-      </div>
-     </div>
-    </li>
-
-
-
-
-   </ul>
-
-   <div class="row pagination-wrap">
-    <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-     <span>Showing 1-7 Of 43,167 Jobs</span>
-    </div>
-    <div class="col-md-6 text-center text-md-right">
-     <div class="custom-pagination ml-auto">
-      <a href="#" class="prev">Prev</a>
-      <div class="d-inline-block">
-       <a href="#" class="active">1</a>
-       <a href="#">2</a>
-       <a href="#">3</a>
-       <a href="#">4</a>
-      </div>
-      <a href="#" class="next">Next</a>
-     </div>
-    </div>
-   </div>
-
   </div>
- </section>
- <!-- JOB LISTINGS END-->
+ </div>
+ <!-- About End -->
 
 
- <!-- CALL TO ACTION -->
- <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('images/hero_1.jpg');">
+ <!-- Jobs Start -->
+ <div class="container-xxl py-5">
   <div class="container">
-   <div class="row align-items-center">
-    <div class="col-md-8">
-     <h2 class="text-white">Looking For A Job?</h2>
-     <p class="mb-3 ml-3 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
-      impedit.</p>
+   <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Job Listing</h1>
+   <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+    <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+     <li class="nav-item">
+      <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+       <h6 class="mt-n1 mb-0">Featured</h6>
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+       <h6 class="mt-n1 mb-0">Full Time</h6>
+      </a>
+     </li>
+     <li class="nav-item">
+      <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+       <h6 class="mt-n1 mb-0">Part Time</h6>
+      </a>
+     </li>
+    </ul>
+
+
+    <div class="tab-content">
+     <div id="tab-1" class="tab-pane fade show p-0 active">
+      @foreach ($jobs as $job)
+       <div class="job-item p-4 mb-4">
+        <div class="row g-4">
+         <div class="col-sm-12 col-md-8 d-flex align-items-center">
+          <img class="flex-shrink-0 img-fluid border rounded"
+           src="{{ $job->company->logo }}" alt=""
+           style="width: 80px; height: 80px;">
+          <div class="text-start ps-4">
+           <h5 class="mb-3">{{ $job->position }}</h5>
+           <span class="text-truncate me-3"><i
+             class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->address }}</span>
+           <span class="text-truncate me-3 badge badge-success mt-1">{{ $job->type }}</span>
+           <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2 mt-1"></i>$123 -
+            $456</span>
+          </div>
+         </div>
+         <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+          <div class="d-flex mb-3">
+           <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
+           <a class="btn btn-primary" href="{{ route('jobs.show', [$job->id, $job->slug]) }}">Apply Now</a>
+          </div>
+          <small class="text-truncate"><i
+            class="far fa-calendar-alt text-primary me-2"></i>{{ $job->created_at->diffForHumans() }}</small>
+         </div>
+        </div>
+       </div>
+      @endforeach
+      <a href="{{ route('job.list') }}" class="btn btn-primary py-3 px-5" href="">Browse More Jobs</a>
+     </div>
     </div>
-    <div class="col-md-3 ml-auto">
-     <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+    <br>
+    <div class="container">
+     <div class="row">
+         <h3 class=" py-1 px-1 m-2">Featured Companies</h3>
+         {{-- @foreach ($companies as $company)
+            <div class="col-md-3">
+             <div class="card" style="width: 18rem;">
+
+              <img class="card-img-top" src="{{$company->logo}}" alt="Card image cap" width="60%">
+              <div class="card-body">
+                <h5 class="card-title">{{ $company->name }}</h5>
+                <p class="card-text">{{ str_limit($company->description, 20) }}</p>
+
+               <a href="{{ route('company.index', [$company->id, $company->slug]) }}" class="btn btn-primary">Visit Company</a>
+              </div>
+             </div>
+            </div>
+         @endforeach --}}
+
+     </div>
     </div>
    </div>
   </div>
- </section>
+ </div>
+ <!-- Jobs End -->
 @endsection
