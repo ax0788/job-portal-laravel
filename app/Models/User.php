@@ -61,7 +61,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(User::class)->withTimestamps();
     }
-    public function favorites()
+    public function favourites()
     {
         return $this->belongsToMany(Job::class, 'favourites', 'user_id', 'job_id')->withTimeStamps();
     }

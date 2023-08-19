@@ -50,13 +50,13 @@
 
 
       @if (!$job->checkApplication())
-      <Apply jobid="{{ $job->id }}"></Apply>
+      <Apply :jobid={{ $job->id }}></Apply>
         @else
         <p class="text-danger" style="font-size: 1.5rem;">You already applied to this job.</p>
       @endif
 
 
-      <Favourite></Favourite>
+      <Favourite :jobid={{ $job->id }} :favourited={{ $job->checkSaved() ? 'true' : 'false' }}></Favourite>
 
 
      @else

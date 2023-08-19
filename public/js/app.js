@@ -22623,11 +22623,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["jobid", 'favourited'],
   data: function data() {
     return {
-      'save': true
+      show: true
     };
+  },
+  methods: {
+    save: function save() {
+      var _this = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/save/' + this.jobid).then(function (response) {
+        return _this.show = true;
+      })["catch"](function (error) {
+        return alert('error');
+      });
+    },
+    unsave: function unsave() {
+      var _this2 = this;
+      axios__WEBPACK_IMPORTED_MODULE_0___default().post('/unsave/' + this.jobid).then(function (response) {
+        return _this2.show = false;
+      })["catch"](function (error) {
+        return alert('error');
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.show = this.jobFavourited ? true : false;
+  },
+  computed: {
+    jobFavourited: function jobFavourited() {
+      return this.favourited;
+    }
   }
 });
 
@@ -22681,24 +22711,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-var _hoisted_1 = {
-  key: 0,
-  "class": "btn btn-secondary",
-  style: {
-    "width": "60%",
-    "margin-top": "1rem"
-  }
-};
-var _hoisted_2 = {
-  key: 1,
-  type: "submit",
-  "class": "btn btn-alert",
-  style: {
-    "width": "60%"
-  }
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return $data.save ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", _hoisted_1, "Save Job")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", _hoisted_2, "Unsave Job"));
+  return $data.show ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    key: 0,
+    onClick: _cache[0] || (_cache[0] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
+      return $options.unsave();
+    }, ["prevent"])),
+    "class": "btn btn-danger",
+    style: {
+      "width": "60%",
+      "margin-top": "1rem"
+    }
+  }, "Unsave Job")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+    key: 1,
+    onClick: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
+      return $options.save();
+    }, ["prevent"])),
+    "class": "btn btn-secondary",
+    style: {
+      "width": "60%",
+      "margin-top": "1rem"
+    }
+  }, "Save Job"));
 }
 
 /***/ }),

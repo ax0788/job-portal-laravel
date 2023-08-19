@@ -6,6 +6,7 @@ use App\Models\Job;
 use App\Models\Company;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -31,5 +32,11 @@ class HomeController extends Controller
         return view('user.home', compact('jobs', 'companies'));
 
     }
+    public function savedJobs()
+    {
+        $jobs = Auth::user()->favourites;
+        return view('jobs.saved', compact('jobs'));
+    }
+
 
 }

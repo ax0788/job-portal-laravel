@@ -35,6 +35,7 @@ Route::get('jobs/{id}/{job}', [JobController::class, 'show'])->name('jobs.show')
 
 Route::get('company/{id}/{company}', [CompanyController::class, 'show'])->name('company.index');
 
+Route::get('/saved', [HomeController::class, 'savedJobs'])->name('savedJobs');
 
 
 
@@ -99,6 +100,6 @@ Route::controller(JobController::class)
 
 Route::controller(FavouriteController::class)
 ->group(function () {
-    Route::get('/save/{id}', 'saveJob')->name('saveJob');
+    Route::post('/save/{id}', 'saveJob')->name('saveJob');
     Route::post('/unsave/{id}', 'unsaveJob')->name('unsaveJob');
 });

@@ -68,7 +68,7 @@
     @if (!Auth::guest() && Auth::user()->role == 'employer')
     <a href="{{ route('company.view') }}" class="nav-item nav-link">{{ Auth::user()->company->cname }}</a>
     @elseif(!Auth::guest() && Auth::user()->role == 'seeker')
-    <a href="#" class="nav-item nav-link">About</a>
+    <a href="{{ route('savedJobs') }}" class="nav-item nav-link">About</a>
     <a href="#" class="nav-item nav-link">{{ Auth::user()->name }}</a>
     <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
     class="text-danger  nav-item nav-link log-out"><span class="mr-2 bi bi-box-arrow-right"></span> Logout</a>
