@@ -117,4 +117,15 @@ class JobController extends Controller
             return view('jobs.list', compact('jobs'));
         }
     }
+
+    public function searchJobs(Request $request)
+    {
+
+        $keyword = $request->get('keyword');
+        $users = Job::where('title', 'like', '%' . $keyword . '%')
+            ->orWhere('position', 'like', '%' . $keyword . '%')
+            ->limit(5)->get();
+        return response()->json($users);
+    }
+
 }

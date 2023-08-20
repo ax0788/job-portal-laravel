@@ -6,6 +6,7 @@ use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Models\Job;
 use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +31,7 @@ Route::get('/', function () {
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('jobs/{id}/{job}', [JobController::class, 'show'])->name('jobs.show');
+Route::get('job/{id}/{job}', [JobController::class, 'show'])->name('jobs.show');
 
 
 Route::get('company/{id}/{company}', [CompanyController::class, 'show'])->name('company.index');
@@ -93,6 +94,7 @@ Route::controller(JobController::class)
         Route::get('/current', 'currentJob')->name('current');
         Route::get('/applications', 'applicant')->name('applicant');
         Route::get('/list', 'Joblist')->name('list');
+    Route::get('/search', 'searchJobs')->name('search');
     });
 // });
 
