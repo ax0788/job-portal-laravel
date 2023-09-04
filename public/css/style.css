@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #00B074;
-    --secondary: #2B9BFF;
+    --primary: #1B9EFF ;
+    --secondary: #1860C7 ;
     --light: #EFFDF5;
     --dark: #2B3940;
 }
@@ -127,7 +127,7 @@
     top: -100px;
     transition: .5s;
     box-shadow: 0 0 45px rgba(0, 0, 0, .08);
-    border-bottom: #00B074 solid 1px;
+    border-bottom: #1860C7  solid 1px;
 
 }
 
@@ -396,7 +396,7 @@
 }
 
 .badge-success {
-   background-color: #00B074;
+   background-color: #1860C7 ;
 }
 
 
@@ -407,4 +407,23 @@ border-radius: 1px red solid;
 .content-container{
 height:100vh;
 
+}
+
+.owl-image-2 img{
+    max-height: fit-content;
+    background-position: center;
+
+}
+
+
+a.cat-item {
+    color: #1860C7 ;
+    font-size: 20px;
+}
+
+
+
+
+.footer{
+    background-color: #242424 !important;
 }

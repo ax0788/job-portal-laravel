@@ -4,34 +4,30 @@
  <div class="container-fluid p-0">
   <div class="owl-carousel header-carousel position-relative">
    <div class="owl-carousel-item position-relative">
-    <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+    <img class="img-fluid" src="{{ asset('img/carousel-1.jpg') }}" alt="">
     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
      style="background: rgba(43, 57, 64, .5);">
      <div class="container">
       <div class="row justify-content-start">
        <div class="col-10 col-lg-8">
-        <h1 class="display-3 text-white animated slideInDown mb-4">Find The Perfect Job That You Deserved</h1>
-        <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
-         Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
-        <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
+        <h1 class="display-3 text-white animated slideInDown mb-4">Finding jobs made easy.</h1>
+        <p class="fs-5 fw-medium text-white mb-4 pb-2">We aim for a convenient and seamless job search experience.</p>
+        <a href="" class="btn btn-secondary py-md-3 px-md-5 me-3 animated slideInLeft">Search For a  Job</a>
+        <br>
        </div>
       </div>
      </div>
     </div>
    </div>
-   <div class="owl-carousel-item position-relative">
-    <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+   <div class="owl-carousel-item position-relative owl-image-2">
+    <img class="img-fluid" src="{{ asset('img/carousel-2.jpg') }}" alt="">
     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
      style="background: rgba(43, 57, 64, .5);">
      <div class="container">
       <div class="row justify-content-start">
        <div class="col-10 col-lg-8">
-        <h1 class="display-3 text-white animated slideInDown mb-4">Find The Best Startup Job That Fit You</h1>
-        <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
-         Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
-        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
-        <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a>
+        <h1 class="display-3 text-white animated slideInDown mb-4">Search for the Job of your dreams!</h1>
+
        </div>
       </div>
      </div>
@@ -43,7 +39,7 @@
 
 
  <!-- Search Start -->
- <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+ <div class="container-fluid bg-secondary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
   <div class="container" id="app">
    <div class="row g-2">
     <div class="col-md-10">
@@ -85,56 +81,56 @@
    <div class="row g-4">
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+      <i class="fa fa-3x fa-mail-bulk text-secondary mb-4"></i>
       <h6 class="mb-3">Marketing</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+      <i class="fa fa-3x fa-headset text-secondary mb-4"></i>
       <h6 class="mb-3">Customer Service</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+      <i class="fa fa-3x fa-user-tie text-secondary mb-4"></i>
       <h6 class="mb-3">Human Resource</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-tasks text-primary mb-4"></i>
+      <i class="fa fa-3x fa-tasks text-secondary mb-4"></i>
       <h6 class="mb-3">Project Management</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+      <i class="fa fa-3x fa-chart-line text-secondary mb-4"></i>
       <h6 class="mb-3">Business Development</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+      <i class="fa fa-3x fa-hands-helping text-secondary mb-4"></i>
       <h6 class="mb-3">Sales & Communication</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-book-reader text-primary mb-4"></i>
+      <i class="fa fa-3x fa-book-reader text-secondary mb-4"></i>
       <h6 class="mb-3">Teaching & Education</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
     </div>
     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
      <a class="cat-item rounded p-4" href="">
-      <i class="fa fa-3x fa-drafting-compass text-primary mb-4"></i>
+      <i class="fa fa-3x fa-drafting-compass text-secondary mb-4"></i>
       <h6 class="mb-3">Design & Creative</h6>
       <p class="mb-0">123 Vacancy</p>
      </a>
@@ -169,10 +165,10 @@
      <h1 class="mb-4">We Help To Get The Best Job And Find A Talent</h1>
      <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita
       erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-     <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-     <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-     <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-     <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+     <p><i class="fa fa-check text-secondary me-3"></i>Tempor erat elitr rebum at clita</p>
+     <p><i class="fa fa-check text-secondary me-3"></i>Aliqu diam amet diam et eos</p>
+     <p><i class="fa fa-check text-secondary me-3"></i>Clita duo justo magna dolore erat amet</p>
+     <a class="btn btn-secondary py-3 px-5 mt-3" href="">Read More</a>
     </div>
    </div>
   </div>
@@ -216,47 +212,27 @@
           <div class="text-start ps-4">
            <h5 class="mb-3">{{ $job->position }}</h5>
            <span class="text-truncate me-3"><i
-             class="fa fa-map-marker-alt text-primary me-2"></i>{{ $job->address }}</span>
+             class="fa fa-map-marker-alt text-secondary me-2"></i>{{ $job->address }}</span>
            <span class="text-truncate me-3 badge badge-success mt-1">{{ $job->type }}</span>
-           <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2 mt-1"></i>$123 -
+           <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-secondary me-2 mt-1"></i>$123 -
             $456</span>
           </div>
          </div>
          <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
           <div class="d-flex mb-3">
-           <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
-           <a class="btn btn-primary" href="{{ route('jobs.show', [$job->id, $job->slug]) }}">Apply Now</a>
+           <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-secondary"></i></a>
+           <a class="btn btn-secondary" href="{{ route('jobs.show', [$job->id, $job->slug]) }}">Apply Now</a>
           </div>
           <small class="text-truncate"><i
-            class="far fa-calendar-alt text-primary me-2"></i>{{ $job->created_at->diffForHumans() }}</small>
+            class="far fa-calendar-alt text-secondary me-2"></i>{{ $job->created_at->diffForHumans() }}</small>
          </div>
         </div>
        </div>
       @endforeach
-      <a href="{{ route('job.list') }}" class="btn btn-primary py-3 px-5" href="">Browse More Jobs</a>
+      <a href="{{ route('job.list') }}" class="btn btn-secondary py-3 px-5" href="">Browse More Jobs</a>
      </div>
     </div>
     <br>
-    <div class="container">
-     <div class="row">
-         <h3 class=" py-1 px-1 m-2">Featured Companies</h3>
-         {{-- @foreach ($companies as $company)
-            <div class="col-md-3">
-             <div class="card" style="width: 18rem;">
-
-              <img class="card-img-top" src="{{$company->logo}}" alt="Card image cap" width="60%">
-              <div class="card-body">
-                <h5 class="card-title">{{ $company->name }}</h5>
-                <p class="card-text">{{ str_limit($company->description, 20) }}</p>
-
-               <a href="{{ route('company.index', [$company->id, $company->slug]) }}" class="btn btn-primary">Visit Company</a>
-              </div>
-             </div>
-            </div>
-         @endforeach --}}
-
-     </div>
-    </div>
    </div>
   </div>
  </div>
