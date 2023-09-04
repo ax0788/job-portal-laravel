@@ -40,7 +40,6 @@ Route::get('/saved', [HomeController::class, 'savedJobs'])->name('savedJobs');
 
 
 
-// Route::middleware(['Seeker'])->group(function () {
 Route::controller(UserController::class)
     ->prefix('user')
     ->as('user.')
@@ -52,8 +51,6 @@ Route::controller(UserController::class)
         Route::post('/avatar', 'avatar')->name('profile.avatar');
     });
 
-
-// });
 
 
 
